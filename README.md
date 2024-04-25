@@ -1,0 +1,2 @@
+# fullstackwdclass
+Goharo class
