@@ -1,0 +1,99 @@
+body {
+    background-color: #3f8893;
+    color: #ffe2e2f1;
+    font-family: 'Bebas';
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+#toggle{
+    display: none;
+}
+.humberger{
+    position: absolute;
+    top: 5em;
+    right: 5%;
+    margin-left: -2em;
+    margin-top: -45px;
+    width: 2em;
+    height: 45px;
+    z-index: 5;
+}
+.humberger div {
+    position: relative;
+    width: 3em;
+    height: 7px;
+    border-radius: 3px;
+    background-color: #f892ce;
+    margin-top: 8px;
+    transition: all 0.3s ease-in-out;
+}
+.nav {
+    pointer-events: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #856ee8;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+
+}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+
+}
+nav {
+    text-align: left;
+    margin: 25%;
+}
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #5fcff5;
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 1.25em;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+}
+nav a:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    width: 0.25em;
+    background-color: #5fcff5;
+    left: -0.5em;
+    transition: all 0.2s ease-in-out;
+}
+nav a:hover{
+    color: #ffff;
+}
+nav a:hover:before{
+height: 100%;
+}
+#toggle:checked + .humberger .top {
+transform: rotate(-45deg);
+margin-top: 25px;
+}
+#toggle:checked + .humberger .bottom{
+    opacity: 0;
+    transform: rotate(45deg);
+}
+#toggle:checked + .humberger .meat{
+    transform: rotate(45deg);
+    margin-top: -7px;
+
+}
+#toggle:checked + .humberger + .nav{
+    top: 0;
+    transform: scale(1);
+}
