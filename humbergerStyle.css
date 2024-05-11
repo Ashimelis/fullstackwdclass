@@ -1,5 +1,7 @@
 body {
-    background-color: #3f8893;
+    background-image: url(./photo-17.avif);
+    background-position: 100%;
+    background-size: cover;
     color: #ffe2e2f1;
     font-family: 'Bebas';
     text-align: center;
@@ -7,6 +9,7 @@ body {
     overflow: hidden;
     padding: 0;
     margin: 0;
+    backface-visibility: initial;
 }
 #toggle{
     display: none;
